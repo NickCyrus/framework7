@@ -1,4 +1,31 @@
-.ks-demo-slider {
-    height: 90%;
+.home-slider {
+    height: 250px;
     width: 100%;
+}
+
+.navbar, .subnavbar, .toolbar{
+	background: #2196F3;
+}
+
+.navbar-inner .center img{
+	margin-top: 20px;
+}
+
+
+.preloader {
+    border-color: #4caf50;
+}
+
+.swiper-slide{
+	max-height: 250px;
+	overflow: hidden;
+}
+
+.swiper-slide img{
+	min-width: 100%;
+	max-width: 100%;
+}
+
+#home{
+	margin: 0px;
 }

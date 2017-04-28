@@ -8,7 +8,10 @@
     <title>My App</title>
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="css/framework7.material.min.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
     <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/kitchen-sink.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
@@ -16,12 +19,6 @@
     <div class="statusbar-overlay"></div>
     <!-- Panels overlay-->
     <div class="panel-overlay"></div>
-    <!-- Left panel with reveal effect-->
-    <div class="panel panel-left panel-cover">
-      <div class="content-block">
-        <p>Left panel content goes here</p>
-      </div>
-    </div>
     
     <!-- Views-->
     <div class="views">
@@ -31,10 +28,7 @@
         <!-- Top Navbar-->
         <div class="navbar">
           <div class="navbar-inner">
-            
-            <div class="center">Template7 Pages</div>
-            <div class="right"><a href="#" class="link icon-only open-panel" data-panel="left"> <i class="icon icon-bars"></i></a></div>
-
+            <div class="center"><img src="images/logo.png"></div>
           </div>
         </div>
 
@@ -43,19 +37,27 @@
           <!-- Index Page-->
           <div data-page="index" class="page">
             <div class="page-content">
-              <div class="content-block-title">Welcome To My Awesome App</div>
-              <div class="content-block">
-                <div class="content-block-inner">
-                  <p>This app illustrates how you can use built-in template engine Template7 to render pages with required data.</p>
+
+              <div class="swiper-container home-slider">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                  
                 </div>
+                <div class="swiper-pagination"></div>
               </div>
-              <div class="list-block">
+
+              
+             <div class="list-block" id="home">
                 <ul>
-                  <li><a href="swiper-horizontal.html" class="item-link item-content">
+                  <li><a href="#" data-template="about" data-context-name="about" class="item-link item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title">About Me</div>
+                      </div></a></li>
+                  <li><a href="projects.html" class="item-link item-content">
                       <div class="item-inner"> 
                         <div class="item-title">My Projects</div>
                       </div></a></li>
-                  <li><a href="material/preloader.html"  class="item-link item-content">
+                  <li><a href="cars.html" data-context-name="cars" class="item-link item-content">
                       <div class="item-inner">
                         <div class="item-title">My Cars</div>
                       </div></a></li>
@@ -65,7 +67,10 @@
                       </div></a></li>
                 </ul>
               </div>
-              </div>
+
+          </div>
+                
+              
           </div>
         </div>
          
@@ -74,6 +79,7 @@
     
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <!-- Path to your app js-->
     <script type="text/javascript" src="js/my-app.js"></script>
   </body>

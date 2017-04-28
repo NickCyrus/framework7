@@ -1,0 +1,10 @@
+<?php
+
+	echo "<div class='swiper-slide'><img src='http://www.lomejordebarranquilla.com/wp-content/uploads/2017/04/EL-CID-420x291.png' /></div>
+<div class='swiper-slide'><img src='http://www.lomejordebarranquilla.com/wp-content/uploads/2017/04/DANN-CARLTON--420x335.png' /></div>
+<div class='swiper-slide'><img src='http://www.lomejordebarranquilla.com/wp-content/uploads/2017/04/BOURBON-ST-420x318.png' /></div>
+<div class='swiper-slide'><img src='http://www.lomejordebarranquilla.com/wp-content/uploads/2017/04/BODYTECH-420x334.png' /></div>";
+
+// echo '{"res":{"home":["http:\/\/www.lomejordebarranquilla.com\/wp-content\/uploads\/2017\/04\/EL-CID-420x291.png","http:\/\/www.lomejordebarranquilla.com\/wp-content\/uploads\/2017\/04\/DANN-CARLTON--420x335.png","http:\/\/www.lomejordebarranquilla.com\/wp-content\/uploads\/2017\/04\/BOURBON-ST-420x318.png","http:\/\/www.lomejordebarranquilla.com\/wp-content\/uploads\/2017\/04\/BODYTECH-420x334.png"],"bonos":[{"titulo":"EL CID","post_content":"Es un hecho establecido hace demasiado tiempo que un lector se distraer\u00e1 con el contenido del texto de un sitio mientras que mira su dise\u00f1o."},{"titulo":"DANN CARLTON","post_content":"Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayor\u00eda sufri\u00f3 alteraciones en alguna manera, ya sea porque se le agreg\u00f3 humor, o palabras aleatorias que no parecen ni un poco cre\u00edbles."},{"titulo":"Bourbon\'s Best Bars","post_content":"Lorem Ipsum<\/strong> es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno est\u00e1ndar de las industrias desde el a\u00f1o 1500."},{"titulo":"BODYTECH","post_content":"Dale a tu cuerpo diferentes est\u00edmulos durante el entrenamiento. Siempre puedes estar mejor y conseguir resultados efectivos y duraderos en menos tiempo."}]}}';
+
+?>

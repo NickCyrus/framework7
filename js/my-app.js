@@ -10,42 +10,57 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
+// myApp.showPreloader();
+
+ 
 myApp.onPageInit('preloader', function (page) {
 
-    $$('.demo-preloader-custom').on('click', function () {
+//    $$('.demo-preloader-custom').on('click', function () {
+            
             myApp.showPreloader('My text...');
             setTimeout(function () {
                 myApp.hidePreloader();
             }, 2000);
-    });
+  //  });
 
 });
 
-// Generate dynamic page
-var dynamicPageIndex = 0;
-function createContentPage() {
-	mainView.router.loadContent(
-        '<!-- Top Navbar-->' +
-        '<div class="navbar">' +
-        '  <div class="navbar-inner">' +
-        '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
-        '    <div class="center sliding">Dynamic Page ' + (++dynamicPageIndex) + '</div>' +
-        '  </div>' +
-        '</div>' +
-        '<div class="pages">' +
-        '  <!-- Page, data-page contains page name-->' +
-        '  <div data-page="dynamic-pages" class="page">' +
-        '    <!-- Scrollable page content-->' +
-        '    <div class="page-content">' +
-        '      <div class="content-block">' +
-        '        <div class="content-block-inner">' +
-        '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
-        '          <p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' +
-        '        </div>' +
-        '      </div>' +
-        '    </div>' +
-        '  </div>' +
-        '</div>'
-    );
-	return;
+var rta = 'http://www.lomejordebarranquilla.com/app.php';
+//rta = 'http://192.168.1.9/android/app/framework7/json.php';
+app = {
+
+           main : function(){
+
+                        $.ajax({
+                                beforeSend : function(){
+                                  myApp.modal({
+                                        title: '<center>Cargando</center>',
+                                        text: '<center><img src="images/loading.svg" /></center>'
+                                    })  
+                           },
+                           crossDomain: true,
+                           data : 'action=get_cupon',
+                           type: 'POST',
+                           // dataType : 'json',
+                           url : rta,
+                           success: function(rs){
+                               $('.swiper-wrapper').append(rs);
+                               myApp.swiper('.swiper-container', { pagination:'.swiper-pagination'});
+                           },
+                           complete: function(){
+
+                                myApp.closeModal()
+                           },
+
+                           error: function(){
+
+                           }
+
+                   }) 
+
+
+            }  
+
 }
+
+app.main()
