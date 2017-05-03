@@ -32,7 +32,7 @@ app = {
                            data : 'action=get_cupon',
                            type: 'POST',
                            // dataType : 'json',
-                           url : rta,
+                           url : 'http://www.lomejordebarranquilla.com/app.php',
                            success: function(rs){
                                $('.swiper-wrapper').append(rs);
                                myApp.swiper('.swiper-container', { pagination:'.swiper-pagination'});
