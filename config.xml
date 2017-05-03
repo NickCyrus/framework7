@@ -53,7 +53,13 @@
     <string>100</string>
     </gap:config-file>
   
-    <access origin="*"/>
+
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenDelay" value="0"/>
+    <preference name="ShowSplashScreenSpinner" value="false"/>  
+
+    <access origin="*"/> 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
     
