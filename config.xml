@@ -53,18 +53,10 @@
     <string>100</string>
     </gap:config-file>
   
-
-    <preference name="AutoHideSplashScreen" value="true" />
-    <preference name="SplashScreenDelay" value="3000" />
-    <preference name="SplashScreen" value="splash.png"/>
-    <preference name="ShowSplashScreenSpinner" value="false"/>
-    <preference name="SplashScreenBackgroundColor" value="#FFF" /> <!-- defaults to "#464646" --> 
- 
     <access origin="*"/> 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
     
-    <plugin name="cordova-plugin-splashscreen" />
     <plugin name="cordova-plugin-camera" />
     <plugin name="cordova-plugin-screen-orientation" />
     <plugin name="phonegap-plugin-barcodescanner" />
