@@ -56,7 +56,7 @@
 
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="3000" />
-    <preference name="SplashScreenDelay" value="0"/>
+    <preference name="SplashScreenDelay" value="splash.png"/>
     <preference name="ShowSplashScreenSpinner" value="false"/>  
 
     <access origin="*"/> 
