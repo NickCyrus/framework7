@@ -3,6 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
+        xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.creandoapp.roc"
         version   = "1.0.0">
 
@@ -15,7 +16,18 @@
     <author href="http://www.creandoapp.com" email="soporte@creandoapp.com">
         CreandoApp Team
     </author>
- 
+      
+    <gap:config-file platform="android" parent="/manifest">
+        <supports-screens 
+            android:xlargeScreens="true" 
+            android:largeScreens="true" 
+            android:smallScreens="true" />
+        <application android:theme="@android:style/Theme.NoTitleBar" >
+            <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            </activity>
+        </application>
+    </gap:config-file>
+
     <preference name="EnableViewportScale" value="true"/>
         
     <!-- Define app icon for each platform. -->
