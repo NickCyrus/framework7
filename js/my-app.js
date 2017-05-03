@@ -1,4 +1,3 @@
-/*
 // Initialize your app
 var myApp = new Framework7();
 
@@ -13,35 +12,34 @@ var mainView = myApp.addView('.view-main', {
 
 // myApp.showPreloader();
 
-*/
+ 
+ 
 
 var rta = 'http://www.lomejordebarranquilla.com/app.php';
 //rta = 'http://192.168.1.9/android/app/framework7/json.php';
-
 app = {
 
            main : function(){
 
                         $.ajax({
                                 beforeSend : function(){
-                                  /* myApp.modal({
+                                  myApp.modal({
                                         title: '<center>Cargando</center>',
                                         text: '<center><img src="images/loading.svg" /></center>'
-                                    })
-                                   */   
+                                    })  
                            },
                            crossDomain: true,
                            data : 'action=get_cupon',
                            type: 'POST',
                            // dataType : 'json',
-                           url : 'http://www.lomejordebarranquilla.com/app.php',
+                           url : rta,
                            success: function(rs){
                                $('.swiper-wrapper').append(rs);
-                              // myApp.swiper('.swiper-container', { pagination:'.swiper-pagination'});
+                               myApp.swiper('.swiper-container', { pagination:'.swiper-pagination'});
                            },
                            complete: function(){
 
-                                // myApp.closeModal()
+                                myApp.closeModal()
                            },
 
                            error: function(){
@@ -53,6 +51,6 @@ app = {
 
             }  
 
-} 
+}
 
-//app.main()
+app.main()
