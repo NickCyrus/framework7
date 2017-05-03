@@ -24,10 +24,11 @@ app = {
 
                         $.ajax({
                                 beforeSend : function(){
-                                  myApp.modal({
+                                  /* myApp.modal({
                                         title: '<center>Cargando</center>',
                                         text: '<center><img src="images/loading.svg" /></center>'
-                                    })  
+                                    })
+                                   */   
                            },
                            crossDomain: true,
                            data : 'action=get_cupon',
@@ -36,11 +37,11 @@ app = {
                            url : 'http://www.lomejordebarranquilla.com/app.php',
                            success: function(rs){
                                $('.swiper-wrapper').append(rs);
-                               myApp.swiper('.swiper-container', { pagination:'.swiper-pagination'});
+                              // myApp.swiper('.swiper-container', { pagination:'.swiper-pagination'});
                            },
                            complete: function(){
 
-                                myApp.closeModal()
+                                // myApp.closeModal()
                            },
 
                            error: function(){
