@@ -13,17 +13,7 @@ var mainView = myApp.addView('.view-main', {
 // myApp.showPreloader();
 
  
-myApp.onPageInit('preloader', function (page) {
 
-//    $$('.demo-preloader-custom').on('click', function () {
-            
-            myApp.showPreloader('My text...');
-            setTimeout(function () {
-                myApp.hidePreloader();
-            }, 2000);
-  //  });
-
-});
 
 var rta = 'http://www.lomejordebarranquilla.com/app.php';
 //rta = 'http://192.168.1.9/android/app/framework7/json.php';
