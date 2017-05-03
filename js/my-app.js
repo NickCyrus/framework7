@@ -1,3 +1,4 @@
+/*
 // Initialize your app
 var myApp = new Framework7();
 
@@ -12,11 +13,11 @@ var mainView = myApp.addView('.view-main', {
 
 // myApp.showPreloader();
 
- 
-
+*/
 
 var rta = 'http://www.lomejordebarranquilla.com/app.php';
 //rta = 'http://192.168.1.9/android/app/framework7/json.php';
+
 app = {
 
            main : function(){
