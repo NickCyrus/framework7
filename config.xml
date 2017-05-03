@@ -56,9 +56,10 @@
 
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="3000" />
-    <preference name="SplashScreenDelay" value="splash.png"/>
-    <preference name="ShowSplashScreenSpinner" value="false"/>  
-
+    <preference name="SplashScreen" value="splash.png"/>
+    <preference name="ShowSplashScreenSpinner" value="false"/>
+    <preference name="SplashScreenBackgroundColor" value="#FFF" /> <!-- defaults to "#464646" --> 
+ 
     <access origin="*"/> 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
