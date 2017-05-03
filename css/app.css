@@ -29,3 +29,29 @@
 #home{
 	margin: 0px;
 }
+
+.icon{
+	font-family: 'fontello';
+}
+
+.list-block ul {
+	background: #1F96F2;
+}
+
+.list-block ul li { 
+	color: #FFF;
+
+}
+
+.list-block ul li a{
+	border-bottom: 1px solid #FFF;
+	color: #FFF;
+}
+
+.list-block ul li:last-child a{
+	border-bottom: none;
+}
+
+.list-block .item-content{
+	font-size: 18px;
+}

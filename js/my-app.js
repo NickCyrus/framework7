@@ -31,12 +31,25 @@ app = {
                            crossDomain: true,
                            data : 'action=get_cupon',
                            type: 'POST',
-                           // dataType : 'json',
+                           dataType : 'json',
                            url : rta,
                            success: function(rs){
-                               $('.swiper-wrapper').append(rs);
-                               myApp.swiper('.swiper-container', { pagination:'.swiper-pagination'});
+                                
+                                var imagesHome = '';
+
+                                if (rs.res.home){
+                                    
+                                    $.each(rs.res.home , function (i, image){
+                                       imagesHome  = imagesHome + "<div class='swiper-slide'><img src='"+image+"' /></div>";
+                                         
+                                    })
+                                    
+                                    $('.swiper-wrapper').append(imagesHome);
+                                }
+                              
+                                myApp.swiper('.swiper-container', { pagination:'.swiper-pagination'});
                            },
+                           
                            complete: function(){
 
                                 myApp.closeModal()
