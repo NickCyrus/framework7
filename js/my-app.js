@@ -51,6 +51,6 @@ app = {
 
             }  
 
-}
+} 
 
-app.main()
+//app.main()
