@@ -57,5 +57,14 @@
 }
 
 .navbar{
-	margin-top: 25px
+	margin-top: 23px;
+    padding: 30px 0;
+     box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.80);
+    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.80);
+    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.80);
 }
+
+html , body{
+	background: #1F96F2;
+}
+
