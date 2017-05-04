@@ -95,7 +95,9 @@ header{
 	padding:5px;
 	margin: 10px 0px;
 }
-
+.cupon-info .title{
+	margin: 10px 0px;
+}
 .cupon-info .leyenda{
 	font-family: 'robotoregular';
 	font-size: 12px;
