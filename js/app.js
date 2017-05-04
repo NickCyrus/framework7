@@ -2,7 +2,8 @@ var pictureSource;
 var destinationType;
 var strImgBase64
     
-document.addEventListener("deviceready",onDeviceReady,false); 
+document.addEventListener("deviceready",onDeviceReady,false);
+
 var rta = 'http://www.lomejordebarranquilla.com/app.php';
 
 
@@ -156,9 +157,7 @@ app = {
 	                           complete: function(){
 										          creandoapp.modalClose()
 										          creandoapp.pageIn('cuponInfo')
-                              
-                              // capturaScreen();
-
+                               
 	                           },
 
                            error: function(){}
@@ -169,7 +168,8 @@ app = {
             },
 
             shared : function(){
-            	   capturaScreen()
+            	   capturaScreen();
+                 alert('CAPTURA');
             }
 }
 

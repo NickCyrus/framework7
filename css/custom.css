@@ -121,6 +121,10 @@ header{
 	padding-bottom: 30px; 
 }
 
+.cupon-compartir i{
+	font-size: 20px;
+}
+
 .swiper-container . .swiper-container1{
 	background: url(../images/bg_load_image.gif) center center no-repeat #FFF;
 	height: 250px;
