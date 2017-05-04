@@ -168,8 +168,9 @@ app = {
             },
 
             shared : function(){
-            	   capturaScreen();
-                 alert('CAPTURA');
+            	   alert('CAPTURA');
+                 capturaScreen();
+
             }
 }
 
