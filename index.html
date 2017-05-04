@@ -3,87 +3,90 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>LMB BONOS</title>
-    <!-- Path to Framework7 Library CSS-->
-    <link rel="stylesheet" href="css/framework7.material.min.css">
-    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
     <!-- Path to your custom app styles-->
-    <link rel="stylesheet" href="icon/css/fontello.css">
-    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="js/carrucel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/icon/css/creandoapp.css">
+    <link rel="stylesheet" href="css/fonts/fonts.css">
     <link rel="stylesheet" href="css/app.css">
-  </head>
-  <body> 
-    <!-- Status bar overlay for fullscreen mode-->
-    <div class="statusbar-overlay"></div>
-    <!-- Panels overlay-->
-    <div class="panel-overlay"></div>
-    
-    <!-- Views-->
-    <div class="views">
-      <!-- Your main view, should have "view-main" class-->
-      <div class="view view-main">
-        
-        <!-- Top Navbar-->
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="center"><img src="images/logo.png"></div>
-          </div>
-        </div>
-
-        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
-        <div class="pages navbar-through toolbar-through">
-          <!-- Index Page-->
-          <div data-page="index" class="page">
-            <div class="page-content">
-
-              <div class="swiper-container home-slider">
-                <div class="swiper-pagination"></div>
-                <div class="swiper-wrapper">
-                  
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-
-              
-             <div class="list-block" id="home">
-                <ul>
-                  <li><a href="#" data-template="about" data-context-name="about" class="item-link item-content">
-                      <div class="item-inner"> 
-                        <div class="item-title">
-                        <i class="icon icon-food"></i>    
-                        HOTELES, BARES Y RESTAURANTES</div>
-                      </div></a></li>
-                  <li><a href="projects.html" class="item-link item-content">
-                      <div class="item-inner"> 
-                        <div class="item-title">
-                        <i class="icon icon-medic"></i>
-                        SALUD Y BELLEZA</div>
-                      </div></a></li> 
-                  <li><a href="cars.html" data-context-name="cars" class="item-link item-content">
-                      <div class="item-inner">
-                        <div class="item-title">
-                        <i class="icon icon-shopping"></i> 
-                        DONDE COMPRAR</div>
-                      </div></a></li>
-                   
-                </ul>
-              </div>
-
-          </div>
-                
-              
-          </div>
-        </div>
-         
-      </div>
-    </div>
-    
+    <link rel="stylesheet" href="css/custom.css">
     <!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="js/framework7.min.js"></script>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/carrucel/dist/owl.carousel.min.js"></script>
     <!-- Path to your app js-->
-    <script type="text/javascript" src="js/my-app.js"></script>
+    
+  </head>
+  <body>
+        <!-- Views !-->
+        <div class="views">
+                <div class="view">
+                     <div class="pages">
+
+                         <!-- PAGE MAIN !--> 
+                         <div class="page" data-page="main" data-out="left" >
+                                <header>
+                                    <div align="center">
+                                        <img src="images/logo.png">
+                                    </div>
+                                </header>  
+                                <div id="home-slider">
+                                    <div class="swiper-container owl-carousel" ></div>
+                                </div>
+                                <div class="list-option">
+                                        
+                                        <ul>
+                                            <li data="1"><i class="icon icon-food"></i> HOTELES,BARES Y RESTAURANTES </li>
+                                            <li data="2"><i class="icon icon-medic"></i> SALUD Y BELLEZA </li>
+                                            <li data="3"><i class="icon icon-shopping"></i> DONDE COMPRAR </li>
+                                        </ul>
+
+                                </div>    
+
+                         </div>
+
+                         <!-- PAGE !-->
+                         <div class="page" data-page="contenido" data-out="upDown" data-in="downUp">
+                                <header>
+                                        <div class="navegacion">
+                                            <div class="action-back">
+                                                <i class="icon icon-left-outline " onclick="creandoapp.pageOut('contenido')"></i>
+                                            </div>
+                                            <span id="titleCurrent"></span>
+
+                                        </div>
+                                </header>
+                                <div id="slide-contenido">
+                                    <div class="swiper-container owl-carousel" ></div>
+                                </div>
+
+
+                         </div> 
+
+                         <!-- PAGE !-->
+                         <div class="page" data-page="cuponInfo" data-out="right" data-in="right">
+                                <header>
+                                        <div class="navegacion">
+                                            <div class="action-back">
+                                                <i class="icon icon-left-outline " onclick="creandoapp.pageOut('cuponInfo')"></i>
+                                            </div>
+                                            <span id="titleCurrentCupon"></span>
+
+                                        </div>
+                                </header>
+                                <div id="cupon-info">
+                                     
+                                </div>
+
+
+                         </div> 
+
+                       <!-- END PAGES !-->     
+                     </div>   
+
+                </div>
+        </div>
+        <!-- Path to creandoApp Library JS-->
+        <script type="text/javascript" src="js/creandoApp.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
   </body>
-</html>
+  </html>

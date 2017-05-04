@@ -1,0 +1,20 @@
+
+.icon-mail:before { content: '\e800'; } /* '' */
+.icon-camera:before { content: '\e801'; } /* '' */
+.icon-share:before { content: '\e802'; } /* '' */
+.icon-left-outline:before { content: '\e803'; } /* '' */
+.icon-right-outline:before { content: '\e804'; } /* '' */
+.icon-up-outline:before { content: '\e805'; } /* '' */
+.icon-down-outline:before { content: '\e806'; } /* '' */
+.icon-down:before { content: '\e807'; } /* '' */
+.icon-left:before { content: '\e808'; } /* '' */
+.icon-right:before { content: '\e809'; } /* '' */
+.icon-up:before { content: '\e80a'; } /* '' */
+.icon-right-open:before { content: '\e80b'; } /* '' */
+.icon-right-open-outline:before { content: '\e80c'; } /* '' */
+.icon-left-open:before { content: '\e80d'; } /* '' */
+.icon-left-open-outline:before { content: '\e80e'; } /* '' */
+.icon-spin6:before { content: '\e839'; } /* '' */
+.icon-medic:before { content: '\f0f1'; } /* '' */
+.icon-food:before { content: '\f0f5'; } /* '' */
+.icon-shopping:before { content: '\f291'; } /* '' */
