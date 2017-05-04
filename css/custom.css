@@ -122,14 +122,14 @@ header{
 }
 
 .cupon-compartir i{
-	font-size: 20px;
-}
+	font-size: 40px !important;
+} 
 
 .swiper-container . .swiper-container1{
 	background: url(../images/bg_load_image.gif) center center no-repeat #FFF;
 	height: 250px;
 }
-
+ 
 .owl-dots {
     margin-top: -63px;
     position: relative;
