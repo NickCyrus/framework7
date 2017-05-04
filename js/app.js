@@ -1,5 +1,37 @@
- 
+var pictureSource;    
+var destinationType;
+var strImgBase64
+    
+document.addEventListener("deviceready",onDeviceReady,false); 
 var rta = 'http://www.lomejordebarranquilla.com/app.php';
+
+
+function onDeviceReady() {
+        pictureSource   = navigator.camera.PictureSourceType;
+        destinationType = navigator.camera.DestinationType;
+   
+}
+
+ 
+    function capturaScreen(){
+        var nameField = 'capture-'+getRandom(1,999999999);
+        navigator.screenshot.URI(function(error,res){
+        // navigator.screenshot.save(function(error,res){  
+          if(error){ 
+            alert(error); 
+          }else{
+              strImgBase64 =  res.URI
+              window.plugins.socialsharing.share('Cupon', 'Cupon', strImgBase64 , null);
+              
+          }
+        },'jpg',100,nameField);
+        
+        
+    }
+
+    function getRandom(min, max) { 
+        return Math.random() * (max - min) + min;
+}
 
 app = {
 
@@ -122,8 +154,10 @@ app = {
 	                           },
 
 	                           complete: function(){
-										creandoapp.modalClose()
-										creandoapp.pageIn('cuponInfo')
+										          creandoapp.modalClose()
+										          creandoapp.pageIn('cuponInfo')
+                              
+                              // capturaScreen();
 
 	                           },
 
@@ -135,7 +169,7 @@ app = {
             },
 
             shared : function(){
-            	 
+            	   capturaScreen()
             }
 }
 
