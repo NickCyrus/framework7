@@ -2,7 +2,7 @@
 
 body {
 	font-family: Arial;
-	background: #1F96F2;
+	background: #FFF;
 	font-family: 'robotoregular';
 } 
    
@@ -10,9 +10,14 @@ body {
 header{
 	margin-top: 23px;
     padding: 10px 0px;
-    background: #1F96F2;
+    background: #FF0000;
     position: relative;
     z-index: 9;
+}
+
+.slogan{
+		color:#FFF;
+		font-size: 33px;
 }
 
 .icon{
@@ -165,16 +170,21 @@ header{
 }
 
 .list-option ul li {
-	color : #FFF;
+	color : #FF0000;
 	padding: 20px 5px;
 	cursor: pointer;
-	border-bottom: 1px  dotted #FFF;
+	border-bottom: 1px  dotted #FF0000;
+	font-size: 24px;
 }
 
+/*
 .list-option ul li:hover{
 	background: #FFF;
 	color: #1F96F2;
+
 }
+
+*/
 
 .list-option ul li i{
 	font-size: 24px;
@@ -205,3 +215,20 @@ header{
     margin-top: -5px;
     display: block;
 }
+
+.res-bar , .hot-tur , .com-ser , .sal-bel{
+	display: block;
+	width: 50px;
+	height: 50px;
+	background: url('../images/res-bar.png') no-repeat;
+	background-position:  center center;
+	background-size:61%;
+	float: left;
+	margin-right: 10px;
+	margin-top: -8px
+}
+
+.hot-tur{ background: url('../images/hot-tur.png') no-repeat;	}
+.com-ser{ background: url('../images/com-ser.png') no-repeat;	}
+.sal-bel{ background: url('../images/sal-bel.png') no-repeat;	}
+#logo-home{ padding-top: 30px; }
