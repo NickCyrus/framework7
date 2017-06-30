@@ -233,8 +233,8 @@ header{
 .hot-tur{ background: url('../images/hot-tur.png') no-repeat; 	}
 .com-ser{ background: url('../images/com-ser.png') no-repeat;	}
 .sal-bel{ background: url('../images/sal-bel.png') no-repeat;	}
-#logo-home{ padding-top: 30px; text-align: center; }
+#logo-home{ padding-top: 10px; text-align: center; }
 
-#logo-home img {
+#logo-home img { 
 	width: 100%;
 }
