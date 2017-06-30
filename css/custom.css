@@ -18,6 +18,8 @@ header{
 .slogan{
 		color:#FFF;
 		font-size: 33px;
+		font-weight: bold;
+		padding: 20px 0px;
 }
 
 .icon{
@@ -171,7 +173,7 @@ header{
 
 .list-option ul li {
 	color : #FF0000;
-	padding: 20px 5px;
+	padding: 12px 5px;
 	cursor: pointer;
 	border-bottom: 1px  dotted #FF0000;
 	font-size: 24px;
@@ -222,13 +224,13 @@ header{
 	height: 50px;
 	background: url('../images/res-bar.png') no-repeat;
 	background-position:  center center;
-	background-size:61%;
+ 
 	float: left;
 	margin-right: 10px;
 	margin-top: -8px
 }
 
-.hot-tur{ background: url('../images/hot-tur.png') no-repeat;	}
+.hot-tur{ background: url('../images/hot-tur.png') no-repeat; 	}
 .com-ser{ background: url('../images/com-ser.png') no-repeat;	}
 .sal-bel{ background: url('../images/sal-bel.png') no-repeat;	}
-#logo-home{ padding-top: 30px; }
+#logo-home{ padding-top: 30px; text-align: center; }
