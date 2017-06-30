@@ -17,7 +17,7 @@ header{
 
 .slogan{
 		color:#FFF;
-		font-size: 33px;
+		font-size: 35px;
 		font-weight: bold;
 		padding: 20px 0px;
 }
@@ -30,7 +30,7 @@ header{
 }
 
 .page[data-page="contenido"]{
-	background: #FF0000;
+	background: #FFF;
 }
 
 
@@ -57,7 +57,7 @@ header{
 #slide-contenido .title , #slide-contenido .leyenda ,  #slide-contenido .boton {
 		display: block;
 		padding: 5px;
-		color: #FFF;
+		color: #000;
 		text-align: center;
 		margin:10px 0px;
 }
@@ -234,3 +234,7 @@ header{
 .com-ser{ background: url('../images/com-ser.png') no-repeat;	}
 .sal-bel{ background: url('../images/sal-bel.png') no-repeat;	}
 #logo-home{ padding-top: 30px; text-align: center; }
+
+#logo-home img {
+	width: 100%;
+}
