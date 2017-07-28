@@ -128,8 +128,15 @@ header{
 
 .cupon-info .info{
 	font-size: 12px !important;
-	padding-bottom: 30px; 
+	padding-bottom: 10px; 
 }
+
+.cupon-info .rescon{
+	font-size: 12px !important;
+	padding:20px 0px;
+    color: red; 
+}
+
 
 .cupon-compartir i{
 	font-size: 40px !important;

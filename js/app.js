@@ -82,6 +82,7 @@ app = {
 
                   		  $.ajax({
                                 beforeSend : function(){
+                                  $('#slide-contenido .swiper-container').html('');  
                                   creandoapp.modalWait({
                                         title: '<center>Buscando...</center>',
                                         text: '<center><img src="images/loading.svg" /></center>'
