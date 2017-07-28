@@ -47,11 +47,11 @@ header{
 }
 
 #slide-contenido{
-	height: 80%;
+	height: 90%;
 }
 
 #slide-contenido .content-img{
-	height: 250px;
+	height: 301px;
 	overflow: hidden;
 }
 
@@ -61,14 +61,24 @@ header{
 		color: #000;
 		text-align: center;
 		margin:10px 0px;
+        font-weight:bold;
 }
 #slide-contenido .leyenda{
 	font-size: 11px;
 	padding: 5px 10px;
 	font-weight: normal;
 }
+
+#slide-contenido .descp{
+	font-size: 13px;
+	padding: 5px 10px;
+	font-weight: normal;
+    text-align:center;
+    color:red;
+}
+
 #slide-contenido .owl-dots {
-	margin-top: -185px !important;
+	margin-top: -274px !important;
 }
 
 #slide-contenido .boton button {
@@ -105,6 +115,7 @@ header{
 }
 .cupon-info .title{
 	margin: 10px 0px;
+    font-weight:bold;
 }
 .cupon-info .leyenda{
 	font-family: 'robotoregular';
@@ -171,7 +182,7 @@ header{
 }
 
 .owl-dot.active span{
-	background: #1F96F2;
+	background: red;
 }
  
 .list-option ul{
