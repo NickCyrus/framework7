@@ -48,6 +48,7 @@ header{
 
 #slide-contenido{
 	height: 90%;
+    background: url(../images/logo-LMB-transparent.gif) center 100px no-repeat #FFF;
 }
 
 #slide-contenido .content-img{
