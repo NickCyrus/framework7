@@ -36,9 +36,37 @@ function onDeviceReady() {
 app = {
 
            main : function(){
+                        
+                            window.location.href = "#main";
+                            creandoapp.setNavigator('main');
+               
+                           if (window.history && window.history.pushState) {
 
+                            $(window).on('hashchange', function(e) {
+                               
+                               
+                                var hash = creandoapp.getLastNav();
+
+                                if (this.cancelBack){
+                                        location.hash = '#'+hash;
+                                        return false;
+                                }
+
+                                var hashLocation = location.hash.replace('#','');
+
+                                if ( hash != hashLocation && hashLocation ) {
+                                        if (hash =='main') { location.hash = "#main"; return false; } 
+                                        creandoapp.pageOut(hash);
+                                }
+                                
+                                console.log(creandoapp.navApp)
+                                
+                            });
+                      }
+               
                         $.ajax({
                                 beforeSend : function(){
+                                    
                                   creandoapp.modalWait({
                                         title: '<center>Cargando</center>',
                                         text: '<center><img src="images/loading.svg" /></center>'
@@ -78,9 +106,14 @@ app = {
                   $('.list-option li').on('click',function(){
 
                   		  var category =  $(this).attr('data');
-
+                          var nameBakc =  $(this).attr('data-nameBack');  
                   		  $.ajax({
                                 beforeSend : function(){
+                                 
+                                  window.location.href = "#"+nameBakc;
+                                    
+                                  creandoapp.setNavigator(nameBakc);
+                                    
                                   $('#slide-contenido .swiper-container').html('');  
                                   creandoapp.modalWait({
                                         title: '<center>Buscando...</center>',
@@ -93,19 +126,18 @@ app = {
 	                           dataType : 'json',
 	                           url : rta,
 	                           success: function(rs){
-	                                var imagesHome = '';
-	                                if (rs.title){
+	                               
+                                   var imagesHome = '';
+	                                
+                                   if (rs.title){
 	                                   		$('#titleCurrent').html(rs.title);
 								  	}
                                     
-                                    if (rs.grid.grid_images){
+                                    if (rs.grid){
                                             $('#grid').html('')
                                             $.each(rs.grid.grid_images, function (key, value){
                                                 $('#grid').append('<li><img src="'+value+'" />');
-                                                $('#grid').append('<li><img src="'+value+'" />'); 
-                                                $('#grid').append('<li><img src="'+value+'" />'); 
-                                                $('#grid').append('<li><img src="'+value+'" />'); 
-                                            })
+                                           })
                                     }
 									
                                    if (rs.slide){
@@ -123,8 +155,8 @@ app = {
 	                           },
 
 	                           complete: function(){
-										creandoapp.modalClose()
-										creandoapp.pageIn('grid');
+								  creandoapp.modalClose()
+								   creandoapp.pageIn('grid');
 
 	                           },
 

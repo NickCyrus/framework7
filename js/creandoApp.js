@@ -1,6 +1,13 @@
 creandoapp = {
 
-          
+            pageBefore : '',
+            wDivice : 0,
+            hDivice : 0,
+            baseULR : '',
+            lastEvent : '',
+            navApp : [],
+            cancelBack : false,
+    
             getWidth  : function(ele){  return $(ele).width(); },  
             getHeight : function(ele){  return $(ele).height(); },
             getinnerWidth : function(ele){  return $(ele).innerwidth(); },  
@@ -26,7 +33,10 @@ creandoapp = {
 
                    return 0; 
             },
-
+            getLastNav : function(){
+                var indice = (!this.navApp.length) ? 0 : (this.navApp.length - 1); 
+                return this.navApp[indice];
+            },    
             setPositionDefault : function(datapage){
                   var page    = $('.page[data-page="'+datapage+'"]');
                   var Default = page.attr('data-origen');
@@ -145,7 +155,19 @@ creandoapp = {
             modal : function(){
                 $("body").append("<div class='modal-overlay'></div>");
             },
-
+    
+            setNavigator : function(value){
+                var indice = (!this.navApp.length) ? 0 : (this.navApp.length);
+                this.navApp[indice] = value;
+            },
+    
+            unsetNavigator : function(value){
+                    var indice = (!this.navApp.length) ? 0 : (this.navApp.length) - 1;
+                    this.navApp.splice(indice, 1);    
+            },
+            backNavigator: function(){
+                window.history.back();
+            },
             modalOverlay : function(action){
 
                   switch(action){
