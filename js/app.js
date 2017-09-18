@@ -101,7 +101,10 @@ app = {
                                     if (rs.grid.grid_images){
                                             $('#grid').html('')
                                             $.each(rs.grid.grid_images, function (key, value){
-                                                 $('#grid').append('<li><img src="'+value+'" width="106" height="106" />'); 
+                                                $('#grid').append('<li><img src="'+value+'" />');
+                                                $('#grid').append('<li><img src="'+value+'" />'); 
+                                                $('#grid').append('<li><img src="'+value+'" />'); 
+                                                $('#grid').append('<li><img src="'+value+'" />'); 
                                             })
                                     }
 									
