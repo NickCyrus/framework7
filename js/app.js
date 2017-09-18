@@ -14,6 +14,10 @@ function onDeviceReady() {
 
  
     function capturaScreen(){
+        
+        $('header').css('visible','hidden');
+        
+        
         var nameField = 'capture-'+getRandom(1,999999999);
         navigator.screenshot.URI(function(error,res){
         // navigator.screenshot.save(function(error,res){  
@@ -25,7 +29,7 @@ function onDeviceReady() {
               
           }
         },'jpg',100,nameField);
-        
+        $('header').css('visible','inherit');
         
     }
 
