@@ -259,6 +259,26 @@ header{
 	width: 100%;
 }
 
-.list-option , #logo-home{
+.list-option , #logo-home , .box-content{
     background: #FFF;
+} 
+
+.box-content{
+    background: #FFF;
+    display: block;
+    height: 100%;
+} 
+
+#grid{
+    margin: 0px;
+    padding: 0px;
+}
+
+#grid li{
+    background: #FEFEFE;
+    display: flex;
+    width: 106px;
+    height: 106px;
+    margin: 2px;
+    float: left;
 }

@@ -9,8 +9,7 @@ var rta = 'http://www.lomejordebarranquilla.com/app.php';
 
 function onDeviceReady() {
         pictureSource   = navigator.camera.PictureSourceType;
-        destinationType = navigator.camera.DestinationType;
-   
+        destinationType = navigator.camera.DestinationType;   
 }
 
  
@@ -98,8 +97,15 @@ app = {
 	                                if (rs.title){
 	                                   		$('#titleCurrent').html(rs.title);
 								  	}
-
-									if (rs.slide){
+                                    
+                                    if (rs.grid.grid_images){
+                                            $('#grid').html('')
+                                            $.each(rs.grid.grid_images, function (key, value){
+                                                 $('#grid').append('<li><img src="'+value+'" width="106" height="106" />'); 
+                                            })
+                                    }
+									
+                                   if (rs.slide){
 	                                   		 
                                     		$('#slide-contenido .swiper-container').html(rs.slide);
                                     	 	var $owl = $('#slide-contenido .owl-carousel');
@@ -115,7 +121,7 @@ app = {
 
 	                           complete: function(){
 										creandoapp.modalClose()
-										creandoapp.pageIn('contenido');
+										creandoapp.pageIn('grid');
 
 	                           },
 
