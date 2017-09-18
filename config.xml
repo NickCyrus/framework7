@@ -5,7 +5,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.lomejordebarranquilla.roc"
-        version   = "1.0.0">
+        version   = "1.2.0">
 
     <name>LOMEJORDEBARRANQUILLA.COM</name>
     
@@ -19,17 +19,25 @@
     </author>
       
     <gap:config-file platform="android" parent="/manifest">
-        <supports-screens 
-            android:xlargeScreens="true" 
-            android:largeScreens="true" 
+        <supports-screens
+            android:xlargeScreens="true"
+            android:largeScreens="true"
             android:smallScreens="true" />
-        <application android:theme="@android:style/Theme.NoTitleBar" >
-            <activity android:theme="@android:style/Theme.NoActionBar.Fullscreen"></activity>
-            <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ></activity>
+      <application android:theme="@android:style/Theme.NoTitleBar" >
+            <activity android:theme="@android:style/Theme.NoTitleBar" >
+            </activity>
         </application>
     </gap:config-file>
-
+    
     <preference name="EnableViewportScale" value="true"/>
+    <preference name="Orientation" value="portrait" />
+    <preference name="ShowTitle" value="false"/>  
+    
+    <preference name="HideKeyboardFormAccessoryBar" value="true"/>
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarBackgroundColor" value="#FF0000" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    
         
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
@@ -61,6 +69,7 @@
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
     
     <plugin name="cordova-plugin-camera" />
+    <plugin name="cordova-plugin-statusbar" />
     <plugin name="cordova-plugin-media-capture" />
     <plugin name="cordova-plugin-device" />
     <plugin name="cordova-plugin-device-motion" />
