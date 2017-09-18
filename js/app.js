@@ -109,9 +109,9 @@ app = {
                           var nameBakc =  $(this).attr('data-nameBack');  
                   		  $.ajax({
                                 beforeSend : function(){
-                                 
+                                  $('#grid').html('')
+                                  
                                   window.location.href = "#"+nameBakc;
-                                    
                                   creandoapp.setNavigator(nameBakc);
                                     
                                   $('#slide-contenido .swiper-container').html('');  
@@ -135,8 +135,10 @@ app = {
                                     
                                     if (rs.grid){
                                             $('#grid').html('')
+                                            var i = 0;
                                             $.each(rs.grid.grid_images, function (key, value){
-                                                $('#grid').append('<li><img src="'+value+'" />');
+                                                $('#grid').append('<li onclick="app.getCupon('+rs.grid.grid_ID[i]+')"><img src="'+value+'" />');
+                                                i++;
                                            })
                                     }
 									
@@ -170,7 +172,8 @@ app = {
 
             getCupon : function(ID){
 
-            			
+            			window.location.href = "#cuponInfo";
+                        creandoapp.setNavigator('cuponInfo');
             		
             			$.ajax({
                                 beforeSend : function(){

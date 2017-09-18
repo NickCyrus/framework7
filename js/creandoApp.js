@@ -110,7 +110,9 @@ creandoapp = {
                         break;
 
                   }
- 
+                
+                 this.unsetNavigator(datapage); 
+                
                  // this.setPositionDefault(datapage);  
 
             },
