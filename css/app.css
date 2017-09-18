@@ -4,7 +4,7 @@ html,body{
     overflow: hidden;
 }
 .modal-overlay, .picker-modal-overlay, .popup-overlay, .preloader-indicator-overlay {
-    background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     height: 100%;
     left: 0;
     opacity: 0;

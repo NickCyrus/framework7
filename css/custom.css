@@ -2,7 +2,7 @@
 
 body {
 	font-family: Arial;
-	background: #FFF;
+	background: #FF0000;
 	font-family: 'robotoregular';
 	overflow: hidden;
 } 
@@ -20,7 +20,7 @@ header{
 		color:#FFF;
 		font-size: 35px;
 		font-weight: bold;
-		padding: 20px 0px;
+		padding: 15px 0px;
 }
 
 .icon{
@@ -257,4 +257,8 @@ header{
 
 #logo-home img { 
 	width: 100%;
+}
+
+.list-option , #logo-home{
+    background: #FFF;
 }
